@@ -11,7 +11,7 @@ type Props = {
 
 const Home = ({ setSelectedPage}: Props) => {
   return (
-    <section className='gap-16 py-10 md:h-full md:pb-0'>
+    <section id="home" className='gap-16 py-10 md:h-full md:pb-0'>
         <motion.div className='md:flex mx-auto w-5/6 items-center justfiy-center md: h-5/6'
             onViewportEnter={() => setSelectedPage(SelectedPage.Home)}
         >

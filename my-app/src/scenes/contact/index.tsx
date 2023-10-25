@@ -3,7 +3,7 @@ import {useForm} from "react-hook-form";
 import { SelectedPage} from "@/shared/types";
 import { motion } from "framer-motion";
 
-
+import ContactImage from "@/assets/window-cleaning-contact.png";
 import React from 'react'
 import HText from "@/shared/HText";
 
@@ -12,7 +12,7 @@ type Props = {
 }
 // Using react hook form
 const Contact = ({setSelectedPage}: Props) => {
-  const inputStyles = `w-full rounded-lg bg-cyan-600 px-5 py-3 placeholder-white`
+  const inputStyles = `w-full rounded-lg bg-cyan-600 px-5 py-3 mt-3 placeholder-white`
 
   const {
     register,
@@ -30,8 +30,8 @@ const Contact = ({setSelectedPage}: Props) => {
   }
 
 
-  return <section id="contactus" className="mx-auto w-5/6 pt-24 pb-32">
-        <motion.div onViewportEnter={() => setSelectedPage(SelectedPage)}>
+  return <section id="contact" className="mx-auto w-5/6 pt-24 pb-32">
+        <motion.div onViewportEnter={() => setSelectedPage(SelectedPage.Contact)}>
 
           <motion.div
           className="md: 3/5"
@@ -75,6 +75,7 @@ const Contact = ({setSelectedPage}: Props) => {
               action="https://formsubmit.co/badboytjy@gmail.com"
               method="POST"
               >
+              <p>Enter Name:</p>
               <input 
               className={inputStyles}
               type="text" 
@@ -90,6 +91,7 @@ const Contact = ({setSelectedPage}: Props) => {
               {errors.name.type === "maxLength" && "Max 100 char."}
             </p>
            )}
+           <p className="mt-2">Enter Email:</p>
             <input 
               className={inputStyles}
               type="email" 
@@ -101,11 +103,11 @@ const Contact = ({setSelectedPage}: Props) => {
            />
            {errors.email && (
             <p className="mt-1 text-cyan-700">
-              {errors.email.type === "required" && "This requires a name"}
+              {errors.email.type === "required" && "This requires a email"}
               {errors.email.type === "pattern" && "Invalid email address"}
             </p>
            )}
-             
+             <p className="mt-2">Enter Phone Number:</p>
              <input
               className={inputStyles}
               type="tel" 
@@ -117,11 +119,11 @@ const Contact = ({setSelectedPage}: Props) => {
            />
            {errors.tel && (
             <p className="mt-1 text-cyan-700">
-              {errors.tel.type === "required" && "This requires a name"}
+              {errors.tel.type === "required" && "This requires a phone number"}
               {errors.tel.type === "maxLength" && "Invalid phone number"}
             </p>
            )}
-             
+             <p className="mt-2">Give Summary About the Windows of your House</p>
              <textarea
               className={inputStyles} 
               placeholder="Message" 
@@ -132,7 +134,7 @@ const Contact = ({setSelectedPage}: Props) => {
            />
            {errors.message && (
             <p className="mt-1 text-cyan-700">
-              {errors.message.type === "required" && "Give summary of the house"}
+              {errors.message.type === "required" && "Give summary of the windows, like how many, size, 1st story or 2nd story"}
               {errors.message.type === "maxLength" && "Max 2000 char."}
             </p>
            )}
@@ -146,9 +148,18 @@ const Contact = ({setSelectedPage}: Props) => {
               </form>
             </motion.div>
 
-            <motion.div>
-              <div>
-                <img className="w-full"/>
+            <motion.div
+             className="mt-16 basis-3/5 md:mt-0"
+             initial="hidden"
+             whileInView="visible"
+             viewport={{ once: true, amount: 0.5}}
+             transition={{ duration: 0.5}}
+             variants={{
+                 hidden: {opacity: 0, x: -50},
+                 visible: {opacity: 1, x: 0}
+             }}>
+              <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
+                <img className="w-full rounded-md" src={ContactImage}/>
                 
               </div>
             </motion.div>

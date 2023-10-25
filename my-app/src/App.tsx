@@ -4,7 +4,7 @@ import Home from "@/scenes/home";
 import { SelectedPage } from "@/shared/types";
 import Benefits from "@/scenes/benefits";
 import Contact from "./scenes/contact";
-
+import Reviews from "./scenes/reviews";
 function App() {
  const [selectedPage, setSelectedPage] = useState<SelectedPage>(SelectedPage.Home)
 
@@ -31,6 +31,7 @@ function App() {
      <Home setSelectedPage={setSelectedPage}/>
      <Benefits setSelectedPage={setSelectedPage}/>
      <Contact setSelectedPage={setSelectedPage}/>
+     <Reviews setSelectedPage={setSelectedPage}/>
     </div>
 
     

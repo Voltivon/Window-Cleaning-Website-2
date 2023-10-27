@@ -12,7 +12,7 @@ type Props = {
 }
 // Using react hook form
 const Contact = ({setSelectedPage}: Props) => {
-  const inputStyles = `w-full rounded-lg bg-cyan-600 px-5 py-3 mt-3 placeholder-white`
+  const inputStyles = `rounded-lg  px-5 py-3 mt-3 w-5/6 shadow-md`
 
   const {
     register,
@@ -159,7 +159,7 @@ const Contact = ({setSelectedPage}: Props) => {
                  visible: {opacity: 1, x: 0}
              }}>
               <div className="w-full before:absolute before:-bottom-20 before:-right-10 before:z-[-1]">
-                <img className="w-full rounded-md" src={ContactImage}/>
+                <img className="w-3/4 rounded-md " src={ContactImage}/>
                 
               </div>
             </motion.div>

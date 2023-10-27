@@ -1,0 +1,29 @@
+.custom-carousel {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 100px;
+}
+
+.custom-carousel .carousel-control-prev {
+    position: absolute;
+    left: 10px; /* Adjust the horizontal position as needed */
+    color: white;
+  }
+  
+.custom-carousel .carousel-control-next {
+    position: absolute; 
+    right: 10px;
+    color: white;
+    
+     /* Adjust the horizontal position as needed */
+    
+    
+  }
+
+.custom-carousel .visually-hidden {
+    display: none;
+}
+
+  

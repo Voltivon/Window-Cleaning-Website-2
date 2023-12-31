@@ -4,7 +4,7 @@ import { SelectedPage} from "@/shared/types";
 import { motion } from "framer-motion";
 
 import ContactImage from "@/assets/window-cleaning-contact.png";
-import React from 'react'
+
 import HText from "@/shared/HText";
 
 type Props = {

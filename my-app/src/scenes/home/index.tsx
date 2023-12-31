@@ -4,6 +4,11 @@ import React from 'react'
 import AnchorLink from 'react-anchor-link-smooth-scroll'
 import TivonHomeImage from "@/assets/tivon-window-home.png"
 import { motion } from "framer-motion"
+import homeLogo1 from "@/assets/home-logo-1.png"
+import homeLogo2 from "@/assets/home-logo-2.png"
+import homeLogo3 from "@/assets/home-logo-3.png"
+
+
 type Props = {
    
     setSelectedPage: (value: SelectedPage) => void
@@ -43,8 +48,8 @@ const Home = ({ setSelectedPage}: Props) => {
             </ActionButton>
             <AnchorLink
                 className="text sm font-bold text-cyan-500"
-                onClick={() => setSelectedPage(SelectedPage.Contact)}
-                href={`#${SelectedPage.Contact}`}>
+                onClick={() => setSelectedPage(SelectedPage.About)}
+                href={`#${SelectedPage.About}`}>
                 <p>Learn More</p>
             </AnchorLink>
         </div>  
@@ -55,7 +60,22 @@ const Home = ({ setSelectedPage}: Props) => {
     </div>
  </motion.div>
 
-    
+    <div className="bg-cyan-500 w-full h-40 opacity-40 flex justify-around">
+           <div className="flex flex-col items-center">
+            <h1 className="text-lg font-bold opacity-100 text-black">Family Owned</h1>
+            <img className='pt-3 pb-3 w-28'src={homeLogo2}/>
+           </div>
+           <div className='flex flex-col items-center'>
+           <h1 className="text-black font-bold text-lg">Dedicated</h1>
+             <img className='pt-3 pb-3 w-28' src={homeLogo1}/>
+           </div>
+           <div className='flex flex-col items-center'>
+           <h1 className="text-black font-bold text-lg">Local Business</h1>
+            <img className='pt-3 pb-3 w-28'  src={homeLogo3}/>  
+           </div>
+           
+              
+    </div>
     </section>
   )
 }

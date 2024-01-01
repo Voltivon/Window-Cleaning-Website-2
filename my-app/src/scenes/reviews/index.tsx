@@ -56,11 +56,11 @@ const Reviews = ({setSelectedPage}: Props) => {
     },)
 
   return (
-    <section id="reviews" className="bg-gray-100 h-fit">
+    <section id="reviews" className="bg-gray-100 h-fit shadow-2xl shadow-black ">
       <h1 className="text-center text-5xl pt-20 ">Review Gallery</h1>
       <p className='text-center pt-5'> This is a visual representation of our commitment to excellence and quality service.</p>
     <motion.div
-      className=" flex items-center justify-center h-fit"
+      className=" flex items-center justify-center h-fit pt-10"
       onViewportEnter={() => setSelectedPage(SelectedPage.Reviews)}
     >
       

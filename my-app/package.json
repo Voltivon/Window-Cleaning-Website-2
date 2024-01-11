@@ -2,7 +2,7 @@
   "name": "my-app",
   "private": true,
   "version": "0.0.0",
-  "homepage": "https:/Voltivon.github.io/my-app",
+  "homepage": "https://Voltivon.github.io/my-app",
   "type": "module",
   "scripts": {
     "predeploy": "npm run build",

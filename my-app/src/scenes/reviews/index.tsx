@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react'
+import{ useEffect } from 'react'
 import Carousel  from "react-bootstrap/Carousel";
 import { SelectedPage } from '@/shared/types';
 import CarouselImg1 from "@/assets/carousel-img-1.png";
